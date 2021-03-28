@@ -37,6 +37,8 @@ paths:
       responses:
         '200':
           description: Added user id.
+      tags:
+        - user
 
   /user/id:
     summary: Get user by id.
@@ -52,6 +54,8 @@ paths:
       responses:
         '200':
           description: Corresponding user.
+      tags:
+        - user
 
   /user/count:
     summary: Get user count.
@@ -63,6 +67,8 @@ paths:
             application/json:
               example:
                 count: '3'
+      tags:
+        - user
 
   /post/all:
     summary: Get all post.
@@ -70,6 +76,8 @@ paths:
       responses:
         '200':
           description: List of posts.
+      tags:
+        - post
 
   /post/add:
     summary: Add post.
@@ -84,6 +92,8 @@ paths:
       responses:
         '200':
           description: Added post id.
+      tags:
+        - post
 
   /post/id:
     summary: Get post by id.
@@ -99,6 +109,8 @@ paths:
       responses:
         '200':
           description: Corresponding post.
+      tags:
+        - post
 
   /post/count:
     summary: Get post count.
@@ -110,3 +122,5 @@ paths:
             application/json:
               example:
                 count: '3'
+      tags:
+        - post
