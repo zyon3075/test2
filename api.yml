@@ -44,12 +44,12 @@ paths:
     get:
       parameters:
         - name: id
-        - in: query
-        - schema:
+          in: query
+          schema:
             type: number
-        - example: '1'
-        - required: true
-        - allowEmptyValue: false
+          example: '1'
+          required: true
+          allowEmptyValue: false
       responses:
         '200':
           description: Corresponding user.
@@ -99,12 +99,12 @@ paths:
     get:
       parameters:
         - name: id
-        - in: query
-        - schema:
+          in: query
+          schema:
             type: number
-        - example: '1'
-        - required: true
-        - allowEmptyValue: false
+          example: '1'
+          required: true
+          allowEmptyValue: false
       responses:
         '200':
           description: Corresponding post.
