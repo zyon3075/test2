@@ -11,14 +11,14 @@ servers:
 paths:
 
   /user/all:
-    description: Get all users.
+    summary: Get all users.
     get:
       responses:
         '200':
           description: List of users.
 
   /user/add:
-    description: Add user.
+    summary: Add user.
     post:
       requestBody:
         content:
@@ -32,7 +32,7 @@ paths:
           description: Added user id.
 
   /user/id:
-    description: Get user by id.
+    summary: Get user by id.
     get:
       parameters:
         - example: '1'
@@ -47,7 +47,7 @@ paths:
           description: Corresponding user.
 
   /user/count:
-    description: Get user count.
+    summary: Get user count.
     get:
       responses:
         '200':
@@ -58,14 +58,14 @@ paths:
                 count: '3'
 
   /post/all:
-    description: Get all post.
+    summary: Get all post.
     get:
       responses:
         '200':
           description: List of posts.
 
   /post/add:
-    description: Add post.
+    summary: Add post.
     post:
       requestBody:
         content:
@@ -79,7 +79,7 @@ paths:
           description: Added post id.
 
   /post/id:
-    description: Get post by id.
+    summary: Get post by id.
     get:
       parameters:
         - example: '1'
@@ -94,7 +94,7 @@ paths:
           description: Corresponding post.
 
   /post/count:
-    description: Get post count.
+    summary: Get post count.
     get:
       responses:
         '200':
