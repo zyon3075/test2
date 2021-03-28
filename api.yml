@@ -15,7 +15,6 @@ tags:
 paths:
 
   /user/all:
-    operationId: /user/all
     description: Get all users.
     get:
       responses:
@@ -25,7 +24,7 @@ paths:
         - user
 
   /user/add:
-    summary: Add user.
+    description: Add user.
     post:
       requestBody:
         content:
@@ -41,16 +40,16 @@ paths:
         - user
 
   /user/id:
-    summary: Get user by id.
+    description: Get user by id.
     get:
       parameters:
-        - example: '1'
-          name: id
-          schema:
+        - name: id
+        - in: query
+        - schema:
             type: number
-          in: query
-          required: true
-          allowEmptyValue: false
+        - example: '1'
+        - required: true
+        - allowEmptyValue: false
       responses:
         '200':
           description: Corresponding user.
@@ -58,7 +57,7 @@ paths:
         - user
 
   /user/count:
-    summary: Get user count.
+    description: Get user count.
     get:
       responses:
         '200':
@@ -71,7 +70,7 @@ paths:
         - user
 
   /post/all:
-    summary: Get all post.
+    description: Get all post.
     get:
       responses:
         '200':
@@ -80,7 +79,7 @@ paths:
         - post
 
   /post/add:
-    summary: Add post.
+    description: Add post.
     post:
       requestBody:
         content:
@@ -96,16 +95,16 @@ paths:
         - post
 
   /post/id:
-    summary: Get post by id.
+    description: Get post by id.
     get:
       parameters:
-        - example: '1'
-          name: id
-          schema:
+        - name: id
+        - in: query
+        - schema:
             type: number
-          in: query
-          required: true
-          allowEmptyValue: false
+        - example: '1'
+        - required: true
+        - allowEmptyValue: false
       responses:
         '200':
           description: Corresponding post.
@@ -113,7 +112,7 @@ paths:
         - post
 
   /post/count:
-    summary: Get post count.
+    description: Get post count.
     get:
       responses:
         '200':
