@@ -15,8 +15,8 @@ tags:
 paths:
 
   /user/all:
-    description: Get all users.
     get:
+      description: Get all users.
       responses:
         '200':
           description: List of users.
@@ -24,8 +24,8 @@ paths:
         - user
 
   /user/add:
-    description: Add user.
     post:
+      description: Add user.
       requestBody:
         content:
           application/json:
@@ -40,8 +40,8 @@ paths:
         - user
 
   /user/id:
-    description: Get user by id.
     get:
+      description: Get user by id.
       parameters:
         - name: id
           in: query
@@ -57,8 +57,8 @@ paths:
         - user
 
   /user/count:
-    description: Get user count.
     get:
+      description: Get user count.
       responses:
         '200':
           description: Number of users.
@@ -70,8 +70,8 @@ paths:
         - user
 
   /post/all:
-    description: Get all post.
     get:
+      description: Get all post.
       responses:
         '200':
           description: List of posts.
@@ -79,8 +79,8 @@ paths:
         - post
 
   /post/add:
-    description: Add post.
     post:
+      description: Add post.
       requestBody:
         content:
           application/json:
@@ -95,8 +95,8 @@ paths:
         - post
 
   /post/id:
-    description: Get post by id.
     get:
+      description: Get post by id.
       parameters:
         - name: id
           in: query
@@ -112,8 +112,8 @@ paths:
         - post
 
   /post/count:
-    description: Get post count.
     get:
+      description: Get post count.
       responses:
         '200':
           description: Number of posts.
