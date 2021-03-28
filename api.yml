@@ -15,7 +15,8 @@ tags:
 paths:
 
   /user/all:
-    summary: Get all users.
+    operationId: /user/all
+    description: Get all users.
     get:
       responses:
         '200':
