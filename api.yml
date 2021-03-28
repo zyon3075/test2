@@ -1,0 +1,105 @@
+openapi: 3.0.3
+
+info:
+  title: Spring Boot REST API Server
+  version: '1.0.0'
+  description: An example REST API server using Spring Boot.
+
+servers:
+  - url: 'http://localhost:8080'
+
+paths:
+
+  /user/all:
+    description: Get all users.
+    get:
+      responses:
+        '200':
+          description: List of users.
+
+  /user/add:
+    description: Add user.
+    post:
+      requestBody:
+        content:
+          application/json:
+            example:
+              name: rulyox
+              age: 20
+        required: true
+      responses:
+        '200':
+          description: Added user id.
+
+  /user/id:
+    description: Get user by id.
+    get:
+      parameters:
+        - example: '1'
+          name: id
+          schema:
+            type: number
+          in: query
+          required: true
+          allowEmptyValue: false
+      responses:
+        '200':
+          description: Corresponding user.
+
+  /user/count:
+    description: Get user count.
+    get:
+      responses:
+        '200':
+          description: Number of users.
+          content:
+            application/json:
+              example:
+                count: '3'
+
+  /post/all:
+    description: Get all post.
+    get:
+      responses:
+        '200':
+          description: List of posts.
+
+  /post/add:
+    description: Add post.
+    post:
+      requestBody:
+        content:
+          application/json:
+            example:
+              name: rulyox
+              age: 20
+        required: true
+      responses:
+        '200':
+          description: Added post id.
+
+  /post/id:
+    description: Get post by id.
+    get:
+      parameters:
+        - example: '1'
+          name: id
+          schema:
+            type: number
+          in: query
+          required: true
+          allowEmptyValue: false
+      responses:
+        '200':
+          description: Corresponding post.
+
+  /post/count:
+    description: Get post count.
+    get:
+      responses:
+        '200':
+          description: Number of posts.
+          content:
+            application/json:
+              example:
+                count: '3'
